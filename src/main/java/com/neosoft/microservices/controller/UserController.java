@@ -107,9 +107,9 @@ public class UserController {
 	
 	@PutMapping("/soft/{id}")
 	public User softDelete(@PathVariable("id") Long id) {
-		if (id == null) {
-            throw new InvalidRequestException("Id must not be null");
-        }
+//		if (id == null) {
+//            throw new InvalidRequestException("Id must not be null");
+//        }
         Optional<User> optionalUser = userRepo.findById(id);
         
         if (!optionalUser.isPresent()) {
@@ -124,9 +124,9 @@ public class UserController {
 	
 	@PutMapping("/unsoft/{id}")
 	public User unSoftDelete(@PathVariable("id") Long id) {
-		if (id == null) {
-            throw new InvalidRequestException("Id must not be null");
-        }
+//		if (id == null) {
+//            throw new InvalidRequestException("Id must not be null");
+//        }
         Optional<User> optionalUser = userRepo.findById(id);
         
         if (!optionalUser.isPresent()) {
